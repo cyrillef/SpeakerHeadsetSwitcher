@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3E33A5EE-78D1-44D6-9A7A-107C8B778F36}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Steinnheiser</RootNamespace>
+    <AssemblyName>Steinnheiser</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandLineParser\Attributes\AssemblyLicenseAttribute.cs" />
+    <Compile Include="CommandLineParser\Attributes\AssemblyUsageAttribute.cs" />
+    <Compile Include="CommandLineParser\Attributes\BaseOptionAttribute.cs" />
+    <Compile Include="CommandLineParser\Attributes\HelpOptionAttribute.cs" />
+    <Compile Include="CommandLineParser\Attributes\HelpVerbOptionAttribute.cs" />
+    <Compile Include="CommandLineParser\Attributes\MultiLineTextAttribute.cs" />
+    <Compile Include="CommandLineParser\Attributes\OptionArrayAttribute.cs" />
+    <Compile Include="CommandLineParser\Attributes\OptionAttribute.cs" />
+    <Compile Include="CommandLineParser\Attributes\OptionListAttribute.cs" />
+    <Compile Include="CommandLineParser\Attributes\ParserStateAttribute.cs" />
+    <Compile Include="CommandLineParser\Attributes\ValueListAttribute.cs" />
+    <Compile Include="CommandLineParser\Attributes\ValueOptionAttribute.cs" />
+    <Compile Include="CommandLineParser\Attributes\VerbOptionAttribute.cs" />
+    <Compile Include="CommandLineParser\BadOptionInfo.cs" />
+    <Compile Include="CommandLineParser\Extensions\CharExtensions.cs" />
+    <Compile Include="CommandLineParser\Extensions\StringExtensions.cs" />
+    <Compile Include="CommandLineParser\GlobalSuppressions.cs" />
+    <Compile Include="CommandLineParser\Infrastructure\Assumes.cs" />
+    <Compile Include="CommandLineParser\Infrastructure\Pair.cs" />
+    <Compile Include="CommandLineParser\Infrastructure\PopsicleSetter.cs" />
+    <Compile Include="CommandLineParser\Infrastructure\ReflectionCache.cs" />
+    <Compile Include="CommandLineParser\Infrastructure\ReflectionHelper.cs" />
+    <Compile Include="CommandLineParser\Infrastructure\SR.strings.cs" />
+    <Compile Include="CommandLineParser\IParserState.cs" />
+    <Compile Include="CommandLineParser\Parser.cs" />
+    <Compile Include="CommandLineParser\ParserException.cs" />
+    <Compile Include="CommandLineParser\ParserSettings.cs" />
+    <Compile Include="CommandLineParser\ParserState.cs" />
+    <Compile Include="CommandLineParser\ParsingError.cs" />
+    <Compile Include="CommandLineParser\Parsing\ArgumentParser.cs" />
+    <Compile Include="CommandLineParser\Parsing\IArgumentEnumerator.cs" />
+    <Compile Include="CommandLineParser\Parsing\LongOptionParser.cs" />
+    <Compile Include="CommandLineParser\Parsing\OneCharStringEnumerator.cs" />
+    <Compile Include="CommandLineParser\Parsing\OptionGroupParser.cs" />
+    <Compile Include="CommandLineParser\Parsing\OptionInfo.cs" />
+    <Compile Include="CommandLineParser\Parsing\OptionMap.cs" />
+    <Compile Include="CommandLineParser\Parsing\PresentParserState.cs" />
+    <Compile Include="CommandLineParser\Parsing\PropertyWriter.cs" />
+    <Compile Include="CommandLineParser\Parsing\StringArrayEnumerator.cs" />
+    <Compile Include="CommandLineParser\Parsing\TargetCapabilitiesExtensions.cs" />
+    <Compile Include="CommandLineParser\Parsing\ValueMapper.cs" />
+    <Compile Include="CommandLineParser\Text\BaseSentenceBuilder.cs" />
+    <Compile Include="CommandLineParser\Text\CopyrightInfo.cs" />
+    <Compile Include="CommandLineParser\Text\EnglishSentenceBuilder.cs" />
+    <Compile Include="CommandLineParser\Text\FormatOptionHelpTextEventArgs.cs" />
+    <Compile Include="CommandLineParser\Text\HeadingInfo.cs" />
+    <Compile Include="CommandLineParser\Text\HelpText.cs" />
+    <Compile Include="CommandLineParser\Text\_ParsingErrorsHandler.cs" />
+    <Compile Include="CoreAudioApi\AudioEndpointVolume.cs" />
+    <Compile Include="CoreAudioApi\AudioEndpointVolumeCallback.cs" />
+    <Compile Include="CoreAudioApi\AudioEndpointVolumeChannel.cs" />
+    <Compile Include="CoreAudioApi\AudioEndpointVolumeChannels.cs" />
+    <Compile Include="CoreAudioApi\AudioEndpointVolumeNotificationDelegate.cs" />
+    <Compile Include="CoreAudioApi\AudioEndpointVolumeStepInformation.cs" />
+    <Compile Include="CoreAudioApi\AudioEndPointVolumeVolumeRange.cs" />
+    <Compile Include="CoreAudioApi\AudioMeterInformation.cs" />
+    <Compile Include="CoreAudioApi\AudioMeterInformationChannels.cs" />
+    <Compile Include="CoreAudioApi\AudioSessionControl.cs" />
+    <Compile Include="CoreAudioApi\AudioSessionDisconnectReason.cs" />
+    <Compile Include="CoreAudioApi\AudioSessionManager.cs" />
+    <Compile Include="CoreAudioApi\AudioSessionState.cs" />
+    <Compile Include="CoreAudioApi\AudioVolumeNotificationData.cs" />
+    <Compile Include="CoreAudioApi\PolicyConfig.cs" />
+    <Compile Include="CoreAudioApi\EDataFlow.cs" />
+    <Compile Include="CoreAudioApi\EDeviceState.cs" />
+    <Compile Include="CoreAudioApi\EEndpointHardwareSupport.cs" />
+    <Compile Include="CoreAudioApi\ERole.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\AUDIO_VOLUME_NOTIFICATION_DATA.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\Blob.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\CLSCTX.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\IPolicyConfig.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\eStgmAccess.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\IAudioEndpointVolume.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\IAudioEndpointVolumeCallback.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\IAudioMeterInformation.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\IAudioPeakMeter.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\IAudioSessionControl2.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\IAudioSessionEnumerator.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\IAudioSessionEvents.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\IAudioSessionManager2.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\IMMDevice.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\IMMDeviceCollection.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\IMMDeviceEnumerator.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\IMMEndpoint.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\IPolicyConfigVista.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\IPropertyStore.cs" />
+    <Compile Include="CoreAudioApi\Interfaces\ISimpleAudioVolume.cs" />
+    <Compile Include="CoreAudioApi\MMDevice.cs" />
+    <Compile Include="CoreAudioApi\MMDeviceCollection.cs" />
+    <Compile Include="CoreAudioApi\MMDeviceEnumerator.cs" />
+    <Compile Include="CoreAudioApi\PKEY.cs" />
+    <Compile Include="CoreAudioApi\PolicyConfigVista.cs" />
+    <Compile Include="CoreAudioApi\PropertyKey.cs" />
+    <Compile Include="CoreAudioApi\PropertyStore.cs" />
+    <Compile Include="CoreAudioApi\PropertyStoreProperty.cs" />
+    <Compile Include="CoreAudioApi\PropVariant.cs" />
+    <Compile Include="CoreAudioApi\SessionCollection.cs" />
+    <Compile Include="CoreAudioApi\SimpleAudioVolume.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="iTunesLib">
+      <Guid>{9E93C96F-CF0D-43F6-8BA8-B807A3370712}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>13</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
